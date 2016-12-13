@@ -1,4 +1,4 @@
-var agoraUSApp = angular.module('AgoraUS', [ 'ngRoute', 'AgoraUSControllers' ]);
+var agoraUSApp = angular.module('AgoraUS', [ 'ngRoute', 'vAccordion', 'ngAnimate', 'AgoraUSControllers' ]);
 
 agoraUSApp.config([ '$routeProvider', '$locationProvider',
 		function($routeProvider, $locationProvider) {
