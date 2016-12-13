@@ -93,10 +93,6 @@ function column1(data, name) {
     });
 }
 
-
-
-
-
 function semicircle1(data, name) {
 	new Highcharts.Chart({
         chart: {
@@ -184,11 +180,11 @@ function pie3d1(data, name) {
 
 
 
-function pie(data, name) {
+function pie(data, num, name) {
 		    $(document).ready(function () {
 		    	
 		        // Build the chart
-		        $('#container').highcharts({
+		        $('#container'+num).highcharts({
 		            chart: {
 		                plotBackgroundColor: null,
 		                plotBorderWidth: null,
@@ -221,8 +217,8 @@ function pie(data, name) {
 		}
 
 
-function column(data, name) {
-	    $('#container').highcharts({
+function column(data, num ,name) {
+	    $('#container'+num).highcharts({
 	        chart: {
 	            type: 'column'
 	        },
@@ -275,8 +271,8 @@ function column(data, name) {
 
 
 
-function semicircle(data, name) {
-    $('#container').highcharts({
+function semicircle(data, num, name) {
+    $('#container'+num).highcharts({
         chart: {
             plotBackgroundColor: null,
             plotBorderWidth: 0,
@@ -316,8 +312,8 @@ function semicircle(data, name) {
     });
 }
 
-function pie3d(data, name) {
-    $('#container').highcharts({
+function pie3d(data, num, name) {
+    $('#container'+num).highcharts({
         chart: {
             type: 'pie',
             options3d: {
