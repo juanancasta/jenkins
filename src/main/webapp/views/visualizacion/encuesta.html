@@ -1,26 +1,70 @@
-<div ng-show="params.encuesta == null">
-	<table class="table table-responsive table-striped">
+<div class= "row">
+<div class = "col-md-3" > 
+<div class="center-block" style="text-align:center">
+<img src="images/img/TopColum.png" style="width:50%;">
+</div>
+</div>
+<div class = "col-md-6" style="margin-top: 15px;margin-bottom :50px">
+	<div class = "col-md-4">
+	</div>
+	<div class = "col-md-4" style="margin-top: 15px;margin-bottom :50px">
+	<img src="images/img/agora_house.png" class="img-responsive img-circle" alt="" style="text-aling:'center'" >
+	</div>
+	<div class = "col-md-4">
+	</div>
+</div>
+<div class = "col-md-3" style="text-align:center" > 
+<img src="images/img/TopColum.png" style="width:50%;">
+</div>
+</div>
+	
+<div class= "row">
+<div class = "col-md-3"  style="text-align:center;" > 
+<div  style="background-image:url('images/img/ColumCenter.png');background-repeat:repeat-y;">
+
+</div>
+</div>
+<div ng-show="params.encuesta == null" class = "col-md-6" >
+	
+	<table class="table table-responsive table-striped table-hover" style="width:100%">
 		<thead>
-			<tr>
-				<th>Nombre</th>
-				
-				<th>
+			<tr >
+				<th style="width:20%;text-align: left;">Nombre</th>
+				<th style="width:20%;text-align: center;">Nº de Preguntas</th>
+				<th style="width:80%">
 					<!-- Vacio para que muestre solo el enlace -->
 				</th>
 	
 			</tr>
 		</thead>
 		<tbody>
-			<tr ng-repeat="encuesta in encuestas">
-				<td>{{encuesta.nombre}}</td>
-				
-				<td><a class="btn btn-success" target="_self"href="resultados/encuestas/ver.do?encuesta={{encuesta.id}}">Ver
+			<tr ng-repeat="encuesta in encuestas" class="info" style="backgroundcolor:#dbe6f2">
+				<td style="width:20%;text-align: left;">{{encuesta.nombre}}</td>
+				<td style="width:20%;text-align: center;">{{encuesta.preguntas.length}}</td>
+				<td style="width:80%;text-align: right;"><a class="btn btn-success" target="_self"href="resultados/encuestas/ver.do?encuesta={{encuesta.id}}">Ver
 						resultados</a></td>
 						
 			</tr>
 		</tbody>
 	</table>
+ </div>	
+ <div class = "col-md-3"> 
+
+</div>
 </div>
 
+<div class= "row">
+<div class = "col-md-3" > 
+<div class="center-block" style="text-align:center">
+<img src="images/img/BotColum.png" style="width:50%;">
+</div>
+</div>
+<div class = "col-md-6" style="margin-top: 15px;margin-bottom :50px">
+	
+</div>
+<div class = "col-md-3" style="text-align:center" > 
+<img src="images/img/BotColum.png" style="width:50%;">
+</div>
+</div>
 
 	
