@@ -8,6 +8,10 @@
     letter-spacing: 2px;
     opacity:0.78;
 }
+.contenidoprincipal  {
+height: 100%; 
+}
+
 
 
 .navbar li a, .navbar .navbar-brand { 
@@ -31,7 +35,9 @@
 	
 
     background-color: #1abc9c; /* Green */
+    
     color: #ffffff;
+    
 }
 	
 .encuestas{ 
