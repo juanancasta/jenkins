@@ -14,17 +14,13 @@
 	class="table table-responsive table-striped">
 	<%-- keepStatus="true" pagesize="5">  --%>
 
-
+	<%-- comentario de prueba --%>
 	<spring:message code="referemdum_*nombre" var="nombreColumn"></spring:message>
 	<display:column property="nombre" title="${nombreColumn}" />
 
 	<display:column property="idVotacionRecuento" title="${nombreColumn}" />
 	<display:column property="idVotacionModificacion"
 		title="${nombreColumn}" />
-
-
-
-
 
 	<spring:message code="resultados_*ver" var="verColumn"></spring:message>
 	<display:column title="${verColumn}">

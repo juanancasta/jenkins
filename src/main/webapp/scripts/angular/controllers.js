@@ -1,8 +1,8 @@
 var agoraUSControllers = angular.module('AgoraUSControllers', [ 'ngRoute' ]);
 
 function showHeaderAndFooter($scope, title) {
-	// Esta función hay que llamarla en todos los controladores para que
-	// muestren el título, header y footer
+	// Esta funcion hay que llamarla en todos los controladores para que
+	// muestren el titulo, header y footer
 	$scope.date = new Date();
 	$scope.title = title;
 	$scope.footer = {
@@ -119,7 +119,7 @@ agoraUSControllers.controller('preguntasController', ['$http','$scope', '$routeP
 
 
 
-// Visualización de resultados
+// Visualizacion de resultados
 agoraUSControllers.controller('VisualizacionRestController', [
 		'$scope',
 		'$routeParams',
