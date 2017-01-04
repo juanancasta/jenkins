@@ -162,27 +162,27 @@ public class PopulateDatabase {
 		return result;
 	}
 
-	private static File saveSchema(String databaseName, String databaseDialect) throws Throwable {
-		File result;
-		Ejb3Configuration ejb3Configuration;
-		Configuration configuration;		
-		SchemaExport schemaExport;		
-				
-		ejb3Configuration = new Ejb3Configuration().configure(PersistenceUnit, new Properties());
-		configuration = ejb3Configuration.getHibernateConfiguration();
-		configuration.setProperty("hibernate.dialect", databaseDialect);
-		
-		result = File.createTempFile("PopulateDatabase", UUID.randomUUID().toString());
-		 
-		schemaExport = new SchemaExport(configuration);
-		schemaExport.setDelimiter(";");
-		schemaExport.setFormat(false);
-		schemaExport.setOutputFile(result.getAbsolutePath());
-		schemaExport.setFormat(true);
-		schemaExport.execute(false, false, false, true);
-		
-		return result;
-	}
+private static File saveSchema(String databaseName, String databaseDialect) throws Throwable {
+    File result;
+    Ejb3Configuration ejb3Configuration;
+    Configuration configuration = new Configuration().configure();
+    SchemaExport schemaExport;    
+        
+    ejb3Configuration = new Ejb3Configuration().configure(PersistenceUnit, new Properties());
+    configuration = ejb3Configuration.getHibernateConfiguration().configure();
+    configuration.setProperty("hibernate.dialect", databaseDialect).configure();
+    
+    result = File.createTempFile("PopulateDatabase", UUID.randomUUID().toString());
+     
+    schemaExport = new SchemaExport(configuration);
+    schemaExport.setDelimiter(";");
+    schemaExport.setFormat(false);
+    schemaExport.setOutputFile(result.getAbsolutePath());
+    schemaExport.setFormat(true);
+    schemaExport.execute(false, false, false, true);
+    
+    return result;
+  }
 
 	private static String readSchema(File file) throws Throwable {
 		StringBuilder result;		
